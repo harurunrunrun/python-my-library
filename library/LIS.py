@@ -1,5 +1,5 @@
 def LIS(seq):
-  #ŒvŽZ—ÊO(NlogN)
+  #O(NlogN)
   from bisect import bisect_left
   ld=[seq[0]]
   for i in range(len(seq)):
