@@ -53,7 +53,52 @@ class SegTree():
   def all_prod(self):
     return self._d[1]
   
-  #max_right min_left バグってしまった
+  def max_right(self,left,target):
+    self.target=target
+    if left==self._n:
+      return self._n
+    left+=self._size
+    sm=self._e
+    
+    first=True
+    while first or (left & -left)!=left:
+      first=False
+      while left%2==0:
+        left>>=1
+      if not self._f(self._op(sm,self._d[left])):
+        while left<self._size:
+          left*=2
+          if self._f(self._op(sm,self._d[left])):
+            sm=self._op(sm,self._d[left])
+            left+=1
+        return left-self._size
+      sm=self._op(sm,self._d[left])
+      left+=1
+    return self._n
+    
+  def min_left(self,right,target):
+    self.target=target
+    if right==0:
+      return 0
+    
+    right+=self._size
+    sm=self._e
+    
+    first=True
+    while first or (right&-right)!=right:
+      first=False
+      right-=1
+      while right>1 and right%2:
+        right>>=1
+      if not self._f(self._op(self._d[right],sm)):
+        while right<self._size:
+          right=2*right+1
+          if self._f(self._op(self._d[right],sm)):
+            sm=self._op(self._d[right],sm)
+            right-=1
+        return right+1-self._size
+      sm=self._op(self._d[right],sm)
+    return 0
   
   def _update(self,k):
     self._d[k]=self._op(self._d[2*k],self._d[2*k+1])
