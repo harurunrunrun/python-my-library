@@ -1,3 +1,4 @@
+#バグってます、使用しないでください
 class min_heap():
   def __init__(self,d):
     
