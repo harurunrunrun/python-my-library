@@ -9,4 +9,5 @@ gcd    =lambda x,y:gcd(y,x%y)if y else x     #math.gcd
 lcm    =lambda x,y:x*y//gcd(x,y)             #math.lcm
 fact   =lambda n:n*fact(n-1)if n else 1      #math.factorial
 factmod=lambda n,m:n*fact(n-1)%m if n else 1 #factrial_mod
+comb   =lambda n,r:fact(n)//fact(r)//fact(n-r)#comb(n,r)
 
