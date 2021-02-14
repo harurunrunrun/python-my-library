@@ -104,5 +104,5 @@ class SegTree():
     self._d[k]=self._op(self._d[2*k],self._d[2*k+1])
     return
 
-  def _f(u,v):
-    return u<v
+  def _f(self,u):
+    return u<self.target
