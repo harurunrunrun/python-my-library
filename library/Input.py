@@ -4,7 +4,7 @@ class INPUT:
     self.length=len(self.l)
     return
   
-  def stream(self,k=1,f=int):
+  def stream(self,k=1,f=int,f2=False):
     assert(-1<k)
     m=self.length
     if m==0 or m<k:
@@ -13,9 +13,12 @@ class INPUT:
       if k==0:
         self.length=0
         return list(map(f,self.l[::-1]))
-      if k==1:
+      if k==1 and not f2:
         self.length-=1
         return f(self.l.pop())
+      if k==1 and f2:
+        self.length-=1
+        return [f(self.l.pop())]
       ret=[]
       for _ in [0]*k:
         ret.append(f(self.l.pop()))
@@ -25,9 +28,12 @@ class INPUT:
       if k==0:
         self.length=0
         return self.l[::-1]
-      if k==1:
+      if k==1 and not f2:
         self.length-=1
         return self.l.pop()
+      if k==1 and f2:
+        self.length-=1
+        return [self.l.pop()]
       ret=[]
       for _ in [0]*k:
         ret.append(self.l.pop())
@@ -35,3 +41,7 @@ class INPUT:
       return ret
 pin=INPUT().stream
 
+"""
+pin(number[default:1],f[default:int],f2[default:False])
+if number==0 -> return left all
+"""
