@@ -44,4 +44,6 @@ pin=INPUT().stream
 """
 pin(number[default:1],f[default:int],f2[default:False])
 if number==0 -> return left all
+
+eclipse 等では使えない。Wandbox等の入力を一発で読み込むもののみ。
 """
