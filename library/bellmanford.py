@@ -22,4 +22,4 @@ for i in range(E):
   G.append([a,b,c])
   #G.append([b,a,c])#無向の場合のみ
 
-#float("inf")が出力されるときに注意
+#d[i]>=max(V)*max(cost)のときINFと出力することに注意
