@@ -5,10 +5,10 @@ class INPUT:
     if argv[-1] in ["./Main.py","prog.py","Main.py"]:#Atcoder:./Main.py,Wandbox:prog.py,yukicoder:Main.py
       self.l=open(0).read().split()[::-1]
     else:
-      self.l=open("input.txt",mode="r").read().split()[::-1]
+      self.l=open("_input.txt",mode="r").read().split()[::-1]
     self.length=len(self.l)
     return
-  
+
   def stream(self,k=1,f=int,f2=False):
     assert(-1<k)
     m=self.length
