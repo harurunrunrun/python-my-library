@@ -1,13 +1,14 @@
 class INPUT:
   def __init__(self):
     from sys import argv
-    if argv[-1] in ["./Main.py","prog.py"]:#Atcoder:./Main.py,Wandbox:./prog.py
+    print(argv)
+    if argv[-1] in ["./Main.py","prog.py","Main.py"]:#Atcoder:./Main.py,Wandbox:prog.py,yukicoder:Main.py
       self.l=open(0).read().split()[::-1]
     else:
       self.l=open("input.txt",mode="r").read().split()[::-1]
     self.length=len(self.l)
     return
-
+  
   def stream(self,k=1,f=int,f2=False):
     assert(-1<k)
     m=self.length
@@ -48,5 +49,5 @@ pin=INPUT().stream
 """
 pin(number[default:1],f[default:int],f2[default:False])
 if number==0 -> return left all
-eclipse 等ではinput.txtを使うこと。。
+eclipse 等ではinput.txtを使うこと。
 """
