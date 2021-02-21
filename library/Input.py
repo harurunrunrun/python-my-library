@@ -48,5 +48,5 @@ pin=INPUT().stream
 """
 pin(number[default:1],f[default:int],f2[default:False])
 if number==0 -> return left all
-eclipse 等ではinput.txtを使うこと。
+eclipse 等では_input.txtを使うこと。
 """
