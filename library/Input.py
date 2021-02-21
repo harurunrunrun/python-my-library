@@ -1,7 +1,6 @@
 class INPUT:
   def __init__(self):
     from sys import argv
-    print(argv)
     if argv[-1] in ["./Main.py","prog.py","Main.py"]:#Atcoder:./Main.py,Wandbox:prog.py,yukicoder:Main.py
       self.l=open(0).read().split()[::-1]
     else:
