@@ -14,4 +14,4 @@ def sieve(n):
   #return ret
   return cnt
 
-print(sieve(100))
+
