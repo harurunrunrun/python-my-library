@@ -1,3 +1,4 @@
+#未verify
 def lcss(S,T):
   dp=[[0]*(len(T)+1)for _ in[0]*(len(S)+1)]
   ret=0
