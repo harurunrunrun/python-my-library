@@ -1,4 +1,4 @@
-def lcm(S,T):
+def lcs(S,T):
   dp=[[0]*(len(T)+1)for _ in[0]*(len(S)+1)]
   for i in range(1,len(S)+1):
     for j in range(1,len(T)+1):
