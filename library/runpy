@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ $# = 1 ]; then
+  if [ -f ./input.txt ]; then
+    if [ -f ./$1.py ]; then
+      py -3.8 $1.py < input.txt
+    else
+      echo $1.py is not exist
+    fi
+  else
+    echo input.txt is not exist
+  fi
+else
+  echo requirements is not one
+fi
