@@ -7,11 +7,11 @@ if [ $# = 1 ]; then
       time py -3.8 ${name%.*}.py < input.txt
       echo "Exit Code: ${?}" >&2
     else
-      echo ${name%.*}.py is not exist
+      echo ${name%.*}.py is not exist >&2
     fi
   else
-    echo input.txt is not exist
+    echo input.txt is not exist >&2
   fi
 else
-  echo requirements is not one
+  echo requirements is not one >&2
 fi
