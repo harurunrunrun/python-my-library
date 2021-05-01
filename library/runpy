@@ -5,7 +5,7 @@ if [ $# = 1 ]; then
   if [ -f ./input.txt ]; then
     if [ -f ./${name%.*}.py ]; then
       time py -3.8 ${name%.*}.py < input.txt
-      echo "Exit Code: ${?}"
+      echo "Exit Code: ${?}" >&2
     else
       echo ${name%.*}.py is not exist
     fi
