@@ -8,7 +8,7 @@ def dijkstra(s):
   que=[]
   heapify(que)
   d[s]=0
-  heappush(que,[0,s])
+  heappush(que,(0,s))
   while que:
     p=heappop(que)
     v=p[1]
@@ -18,7 +18,7 @@ def dijkstra(s):
       e=G[v][i]
       if d[e[0]]>d[v]+e[1]:
         d[e[0]]=d[v]+e[1]
-        heappush(que,[d[e[0]],e[0]])
+        heappush(que,(d[e[0]],e[0]))
 """
 G[from].append([to,value])で追加
 """
