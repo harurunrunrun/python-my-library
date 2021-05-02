@@ -20,7 +20,7 @@ class dijkstra:
     que=[]
     heapify(que)
     ret[s]=0
-    heappush(que,[0,s])
+    heappush(que,(0,s))
     while que:
       p=heappop(que)
       v=p[1]
@@ -30,7 +30,6 @@ class dijkstra:
         e=self.G[v][i]   
         if ret[e[0]]>ret[v]+e[1]:
           ret[e[0]]=ret[v]+e[1]
-          heappush(que,[ret[e[0]],e[0]])
+          heappush(que,(ret[e[0]],e[0]))
     return ret
-
 
