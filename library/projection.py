@@ -1,3 +1,4 @@
+#(xp1,yp1),(xp2,yp2)を通る直線に、(xp,yp)から垂線を下ろしたときの交点の座標を求める
 def projection(xp1,yp1,xp2,yp2,xp,yp):
   assert((xp1,yp1)!=(xp2,yp2))
   if xp1==xp2:
