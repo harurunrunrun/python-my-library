@@ -1,4 +1,6 @@
 def comb_mod(n,r,mod):
+  if n<r:
+    return 0
   if n-r<r:
     r=n-r
   N=n
