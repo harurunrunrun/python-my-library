@@ -5,6 +5,5 @@ def warshall(d:list,V:int):
   for k in range(V):
     for i in range(V):
       for j in range(V):
-        if d[i][j]!=float("inf") and d[j][i]!=float("inf"):
-          d[i][j]=min(d[i][j],d[i][k]+d[k][j])
+        d[i][j]=min(d[i][j],d[i][k]+d[k][j])
   return d
