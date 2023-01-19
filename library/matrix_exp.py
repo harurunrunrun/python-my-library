@@ -1,5 +1,5 @@
 def matrix_mul(A,B,mod):
-  C=[[0]*len(B)for _ in[0]*len(A)]
+  C=[[0]*len(B[0])for _ in[0]*len(A)]
   for i in range(len(A)):
     for k in range(len(B)):
       for j in range(len(B[0])):
