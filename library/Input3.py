@@ -47,8 +47,6 @@ class INPUT:
       return ret
 pin=INPUT().stream
 
-"""
-pin(number[default:1],f[default:int],f2[default:False])
-if number==0 -> return left all
-listを変数で受け取るとき、必ずlistをTrueにすること。
-"""
+# pin(number[default:1],f[default:int],f2[default:False])
+# if number==0 -> return left all
+# listを変数で受け取るとき、必ずlistをTrueにすること。
